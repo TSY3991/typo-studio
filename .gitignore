@@ -1,0 +1,12 @@
+node_modules/
+dist/
+.claude/
+
+# build artifacts & scratch
+vendor/_*.js
+*.log
+npm-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db

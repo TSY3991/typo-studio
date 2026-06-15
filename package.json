@@ -1,0 +1,48 @@
+{
+  "name": "typo-studio",
+  "version": "2.0.0",
+  "description": "TYPO STUDIO — 中文友善的 IG 輪播貼文排版工具（自動排版引擎 / 避頭尾 / 一鍵修正）",
+  "main": "main.js",
+  "homepage": "https://github.com/Hao0321/typo-studio",
+  "scripts": {
+    "start": "electron .",
+    "compile": "babel vendor/app.jsx --presets @babel/preset-react -o vendor/app.compiled.js",
+    "build-icon": "node build-icon.js",
+    "dist": "npm run compile && electron-builder",
+    "pack": "npm run compile && electron-builder --dir"
+  },
+  "author": "hao0321_studio",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.28.6",
+    "@babel/core": "^7.29.0",
+    "@babel/preset-react": "^7.28.5",
+    "@napi-rs/canvas": "^0.1.97",
+    "electron": "^33.0.0",
+    "electron-builder": "^25.0.0"
+  },
+  "build": {
+    "appId": "com.hao0321.typo-studio",
+    "productName": "TYPO STUDIO",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "index.html",
+      "main.js",
+      "preload.js",
+      "assets/**/*",
+      "vendor/**/*"
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "assets/icon.png"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "installerIcon": "assets/icon.ico",
+      "uninstallerIcon": "assets/icon.ico"
+    }
+  }
+}

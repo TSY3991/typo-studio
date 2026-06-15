@@ -1,0 +1,9 @@
+# Normalise line endings across platforms
+* text=auto eol=lf
+
+# Treat compiled/min bundles and binaries appropriately
+vendor/react.min.js     linguist-vendored
+vendor/react-dom.min.js linguist-vendored
+vendor/app.compiled.js  linguist-generated
+*.png binary
+*.ico binary
