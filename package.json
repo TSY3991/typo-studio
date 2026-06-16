@@ -18,8 +18,8 @@
     "@babel/core": "^7.29.0",
     "@babel/preset-react": "^7.28.5",
     "@napi-rs/canvas": "^0.1.97",
-    "electron": "^33.0.0",
-    "electron-builder": "^25.0.0"
+    "electron": "^42.4.0",
+    "electron-builder": "^26.15.3"
   },
   "build": {
     "appId": "com.hao0321.typo-studio",
